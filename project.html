@@ -1,0 +1,154 @@
+,,,<!DOCTYPE html>
+<html>
+<head>
+<title>My Shop</title>
+
+<style>
+body {font-family: Arial; margin:0;}
+header {
+    background:#2874f0; color:white;
+    padding:15px; display:flex; justify-content:space-between;
+}
+nav a {
+    color:white; margin:10px; text-decoration:none;
+}
+.hero {
+    text-align:center; margin-top:100px;
+}
+button {
+    padding:10px 20px; background:#fb641b;
+    color:white; border:none; cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h2>MyShop 🛍️</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1>Welcome to My Store</h1>
+    <p>Best Products at Best Price</p>
+    <a href="products.html"><button>Shop Now</button></a>
+</div>
+
+<style>
+body {font-family: Arial; margin:0;}
+header {
+    background:#2874f0; color:white;
+    padding:15px; display:flex; justify-content:space-between;
+}
+nav a {color:white; margin:10px; text-decoration:none;}
+
+.container {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap:20px; padding:20px;
+}
+
+.card {
+    background:white; padding:10px;
+    text-align:center; border-radius:10px;
+    box-shadow:0 2px 10px gray;
+}
+
+.card img {
+    width:100%;
+}
+
+button {
+    background:#fb641b; color:white;
+    border:none; padding:8px;
+    cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h2>Products</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<div class="container">
+
+<div class="card">
+    <img src="https://via.placeholder.com/200">
+    <h3>Mobile</h3>
+    <p>₹10000</p>
+    <button onclick="add()">Add to Cart</button>
+</div>
+
+<div class="card">
+    <img src="https://via.placeholder.com/200">
+    <h3>Laptop</h3>
+    <p>₹50000</p>
+    <button onclick="add()">Add to Cart</button>
+</div>
+
+</div>
+
+<script>
+function add() {
+    let count = localStorage.getItem("cart") || 0;
+    count++;
+    localStorage.setItem("cart", count);
+    alert("Added to Cart");
+    <!DOCTYPE html>
+<html>
+<head>
+<title>Cart</title>
+
+<style>
+body {font-family: Arial; text-align:center;}
+header {
+    background:#2874f0; color:white;
+    padding:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h2>Your Cart</h2>
+</header>
+
+<h1 id="count"></h1>
+
+<button onclick="clearCart()">Clear Cart</button>
+
+<script>
+let count = localStorage.getItem("cart") || 0;
+document.getElementById("count").innerText = "Items in Cart: " + count;
+
+function clearCart() {
+    localStorage.removeItem("cart");
+    location.reload();
+}
+</script>
+
+</body>
+</html>
+}
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
